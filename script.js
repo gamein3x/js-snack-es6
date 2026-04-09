@@ -56,3 +56,12 @@ for (let i=0; i<erTeam.length; i++) {
     console.log(erTeam[i]);
 }
 
+const falliList = [];
+
+for (let i=0; i<erTeam.length; i++) {
+    const fallName = erTeam[i].nome;
+    const fallFallo = erTeam[i].falliSubiti;
+    falliList.push(fallName, fallFallo);
+}
+
+console.log(falliList);
