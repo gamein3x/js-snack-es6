@@ -16,18 +16,16 @@ const bici = [
 let biciLeggera = bici[0];
 
 // Scrollo l'array e aggiorno biciLeggera solo se ha un peso minore.
-let current = 1;
-let pesoCurrent = bici[current].peso;
+
 let pesoLeggera = biciLeggera.peso;
 
-while (current < bici.length) {
-    current++;
-    if (pesoCurrent < pesoLeggera) {
-        biciLeggera = bici[current];
+for (let i=1; i < bici.length; i++) {
+    if (bici[i].peso < pesoLeggera) {
+        biciLeggera = bici[i];
     }
 }
 
-console.log(`La bici più leggera è la ${biciLeggera.nome}, peso ${biciLeggera.peso}`);
+console.log(`La bici più leggera è la ${biciLeggera.nome}, peso ${biciLeggera.peso}kg`);
 
 /// Snack2
 // Creare un array di oggetti di squadre di calcio.
