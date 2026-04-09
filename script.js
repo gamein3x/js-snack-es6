@@ -33,3 +33,26 @@ console.log(`La bici più leggera è la ${biciLeggera.nome}, peso ${biciLeggera.
 // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+function randomizePoints() {
+    return Math.floor(Math.random() * 7) + 1;
+}
+
+function randomizeFallo() {
+    return Math.floor(Math.random() * 4) + 1;
+}
+
+const erTeam = [
+    {nome: 'Napoli', punti: 0, falliSubiti: 0},
+    {nome: 'Roma', punti: 0, falliSubiti: 0},
+    {nome: 'Juventus', punti: 0, falliSubiti: 0},
+    {nome: 'Inter', punti: 0, falliSubiti: 0},
+    {nome: 'Milan', punti: 0, falliSubiti: 0},
+]
+
+for (let i=0; i<erTeam.length; i++) {
+    erTeam[i].punti = randomizePoints();
+    erTeam[i].falliSubiti = randomizeFallo();
+    console.log(erTeam[i]);
+}
+
